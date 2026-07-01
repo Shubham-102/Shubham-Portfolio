@@ -18,7 +18,15 @@ export default function Education() {
         {education.map((e, i) => (
           <Reveal key={i} delay={i * 0.05} className="h-full">
             <div className="h-full rounded-[1.75rem] border border-line bg-panel/40 p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 sm:p-8">
-              <p className="label mb-3 accent-text">{e.period}</p>
+              <div className="mb-4 flex items-center gap-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={e.logo}
+                  alt={e.school}
+                  className="h-12 w-12 shrink-0 rounded-xl border border-line bg-white object-contain p-1.5"
+                />
+                <p className="label accent-text">{e.period}</p>
+              </div>
               <h3 className="font-display text-xl font-semibold">{e.school}</h3>
               <p className="mt-1 text-sm text-ink/70">{e.degree}</p>
               <p className="label mt-1 normal-case tracking-normal text-faint">{e.location}</p>

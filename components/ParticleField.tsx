@@ -77,7 +77,7 @@ export default function ParticleField() {
           const dy = a.y - b.y;
           const d = Math.hypot(dx, dy);
           if (d < LINK) {
-            c.strokeStyle = `rgba(201,168,106,${(1 - d / LINK) * 0.34})`;
+            c.strokeStyle = `rgba(15,190,207,${(1 - d / LINK) * 0.32})`;
             c.lineWidth = 1;
             c.beginPath();
             c.moveTo(a.x, a.y);
@@ -90,7 +90,7 @@ export default function ParticleField() {
         const dym = a.y - mouse.y;
         const dm = Math.hypot(dxm, dym);
         if (dm < MOUSE) {
-          c.strokeStyle = `rgba(224,189,134,${(1 - dm / MOUSE) * 0.55})`;
+          c.strokeStyle = `rgba(15,190,207,${(1 - dm / MOUSE) * 0.6})`;
           c.lineWidth = 1;
           c.beginPath();
           c.moveTo(a.x, a.y);
@@ -99,10 +99,10 @@ export default function ParticleField() {
         }
       }
 
-      c.fillStyle = "rgba(216,189,134,0.9)";
+      c.fillStyle = "rgba(15,190,207,0.85)";
       for (const p of pts) {
         c.beginPath();
-        c.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+        c.arc(p.x, p.y, 2, 0, Math.PI * 2);
         c.fill();
       }
 

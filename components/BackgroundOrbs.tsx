@@ -8,6 +8,8 @@ const dots = [
   { left: "88%", delay: "-5s", dur: "27s", size: 6 },
 ];
 
+import ParticleField from "./ParticleField";
+
 export default function BackgroundOrbs() {
   return (
     <div
@@ -16,6 +18,9 @@ export default function BackgroundOrbs() {
     >
       {/* panning blueprint grid */}
       <div className="grid-bg animate-gridpan absolute inset-0 opacity-70" />
+
+      {/* live interactive neural constellation */}
+      <ParticleField />
 
       {/* slowly rotating aurora behind the hero */}
       <div

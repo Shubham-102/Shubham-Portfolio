@@ -15,9 +15,9 @@ export default function Projects() {
         </div>
       </Reveal>
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="flex flex-col gap-6">
         {projects.map((p, i) => (
-          <Reveal key={p.id} delay={i * 0.06} className="h-full">
+          <Reveal key={p.id} delay={i * 0.06}>
             <ProjectCard p={p} index={i} />
           </Reveal>
         ))}

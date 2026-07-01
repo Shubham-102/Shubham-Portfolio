@@ -14,7 +14,7 @@ export const personal = {
     "MLOps Practitioner",
   ],
   tagline:
-    "M.Eng. Computer Science (UConn). I build and ship ML models, RAG pipelines, and data-driven products.",
+    "I build and ship ML models, RAG pipelines, and data-driven products.",
   summary:
     "M.Eng. graduate in Computer Science from UConn with experience building and deploying ML models, RAG pipelines, and data-driven applications. Skilled in Python, PyTorch, LangChain, and MLflow with hands-on exposure to AWS and GCP. Databricks Generative AI certified.",
   status: "Available for full-time — ML Engineering / Data Science",
@@ -52,7 +52,8 @@ export type Project = {
   stack: string[];
   bullets: string[];
   repo?: string; // TODO: add GitHub URL
-  demo?: string; // TODO: add live demo URL (HF Spaces, etc.)
+  demo?: string; // live demo URL (HF Spaces, Streamlit, etc.)
+  preview?: string; // optional screenshot path in /public (e.g. /projects/credit-risk.png)
 };
 
 export const projects: Project[] = [
@@ -68,7 +69,8 @@ export const projects: Project[] = [
       "Tracked 40+ experiments in MLflow; deployed a FastAPI backend (7 endpoints, sub-100ms) and a React dashboard on AWS EC2 with Docker.",
     ],
     repo: "", // TODO
-    demo: "", // TODO
+    demo: "https://huggingface.co/spaces/shubhaM-Maheshwari/credit-risk-engine",
+    preview: "/projects/credit-risk.png",
   },
   {
     id: "multimodal",
@@ -94,7 +96,8 @@ export const projects: Project[] = [
       "Trained a multi-class risk classifier on 50K+ records reaching 87% vs a 72% logistic baseline; deployed on AWS with real-time scoring, data-drift detection, and automated retraining triggers.",
     ],
     repo: "", // TODO
-    demo: "", // TODO
+    demo: "https://insurance-risk-advisor-ecmby3rntyfatawmqd43mb.streamlit.app/",
+    preview: "/projects/insurance.png",
   },
 ];
 
@@ -144,6 +147,7 @@ export const education = [
     location: "Storrs, CT",
     period: "Aug 2024 – May 2026",
     detail: "GPA 3.36/4.00 · Machine Learning, Deep Learning, Data Mining, Cloud Computing",
+    logo: "/logos/uconn.png",
   },
   {
     school: "Gujarat Technological University",
@@ -151,6 +155,7 @@ export const education = [
     location: "India",
     period: "Jul 2019 – May 2023",
     detail: "GPA 3.5/4.00",
+    logo: "/logos/gtu.png",
   },
 ];
 
@@ -173,9 +178,46 @@ export const skills: { group: string; items: string[] }[] = [
   },
 ];
 
-export const certifications = [
-  "Databricks — Generative AI Fundamentals",
-  "Databricks — Fundamentals Accreditation",
-  "AI Fluency: Framework & Foundations — Anthropic",
-  "Microsoft Azure AI Essentials: Workloads & ML on Azure",
+export const certifications: {
+  name: string;
+  issuer: string;
+  logo: string;
+  image: string;
+}[] = [
+  {
+    name: "Generative AI Fundamentals",
+    issuer: "Databricks",
+    logo: "/logos/databricks.svg",
+    image: "/certs/genai-fundamentals.png",
+  },
+  {
+    name: "Databricks Fundamentals Accreditation",
+    issuer: "Databricks",
+    logo: "/logos/databricks.svg",
+    image: "/certs/databricks-fundamentals.png",
+  },
+  {
+    name: "AI Agent Fundamentals",
+    issuer: "Databricks",
+    logo: "/logos/databricks.svg",
+    image: "/certs/ai-agent-fundamentals.png",
+  },
+  {
+    name: "Introduction to Generative AI",
+    issuer: "AWS",
+    logo: "/logos/aws.svg",
+    image: "/certs/aws-genai.png",
+  },
+  {
+    name: "Azure AI Essentials Professional Certificate",
+    issuer: "Microsoft · LinkedIn",
+    logo: "/logos/microsoft.svg",
+    image: "/certs/azure-ai-essentials.png",
+  },
+  {
+    name: "Career Skills in Data Analytics",
+    issuer: "LinkedIn Learning",
+    logo: "/logos/linkedin-icon.svg",
+    image: "/certs/data-analytics-career.png",
+  },
 ];

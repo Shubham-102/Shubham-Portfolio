@@ -12,9 +12,8 @@ const stats = [
 ];
 
 export default function Hero() {
-  const [first, ...rest] = personal.name.split(" ");
   // two big words for the headline (the photo sits between them)
-  const wordA = "ML";
+  const wordA = "AI/ML";
   const wordB = "ENGINEER";
 
   return (
@@ -27,19 +26,18 @@ export default function Hero() {
         <span className="plus-marker absolute bottom-0 right-0" />
 
         <div className="px-4 py-14 text-center sm:py-20">
-          {/* speech bubble */}
+          {/* medium name tagline */}
           <div
-            className="rise relative mx-auto inline-block"
+            className="rise flex items-center justify-center gap-2.5"
             style={{ animationDelay: "0.05s" }}
           >
-            <span className="inline-flex items-center gap-2 rounded-2xl border border-line bg-panel px-5 py-2.5 text-sm font-medium tracking-wide shadow-soft">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-              </span>
-              Hi, I&apos;m {first}
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            <span className="absolute -bottom-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-line bg-panel" />
+            <span className="text-3xl font-semibold tracking-wide text-ink sm:text-5xl">
+              {personal.name}
+            </span>
           </div>
 
           {/* huge headline with photo between the words */}
@@ -50,15 +48,9 @@ export default function Hero() {
             alt={personal.name}
           />
 
-          {/* full name + subtitle */}
+          {/* subtitle */}
           <p
-            className="rise mt-7 text-sm uppercase tracking-[0.3em] text-accent"
-            style={{ animationDelay: "0.3s" }}
-          >
-            {first} {rest.join(" ")}
-          </p>
-          <p
-            className="rise mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+            className="rise mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
             style={{ animationDelay: "0.4s" }}
           >
             {personal.tagline}
