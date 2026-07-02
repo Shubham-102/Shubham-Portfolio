@@ -73,6 +73,20 @@ export const projects: Project[] = [
     preview: "/projects/credit-risk.png",
   },
   {
+    id: "rag-chatbot",
+    name: "DocuMind — RAG Document Chatbot",
+    kind: "GenAI · Retrieval-Augmented Generation",
+    metric: "Grounded · Cited",
+    stack: ["Python", "LangChain", "ChromaDB", "Groq (Llama 3.1)", "HuggingFace", "Streamlit"],
+    bullets: [
+      "Built a Retrieval-Augmented Generation chatbot that answers strictly from uploaded documents (PDF, TXT, Markdown, DOCX) with expandable citations — document name, page, and excerpt — to eliminate hallucination.",
+      "Chunks documents at 500 tokens and embeds them with all-MiniLM-L6-v2 into ChromaDB; queries run a top-4 similarity search feeding a word-by-word streamed Groq Llama 3.1 response, orchestrated end-to-end with LangChain.",
+    ],
+    repo: "https://github.com/Shubham-102/rag-chatbot",
+    demo: "https://huggingface.co/spaces/shubhaM-Maheshwari/rag-chatbot",
+    preview: "/projects/rag-chatbot.png",
+  },
+  {
     id: "multimodal",
     name: "Explainable Multi-Modal Deep Learning",
     kind: "Capstone",

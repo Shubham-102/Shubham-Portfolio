@@ -6,8 +6,8 @@ import CountUp from "./CountUp";
 
 const stats = [
   { n: "0.74", l: "AUC credit model" },
-  { n: "176K", l: "records modeled" },
   { n: "96.6%", l: "multi-modal acc." },
+  { n: "3", l: "live AI demos" },
   { n: "<100ms", l: "FastAPI inference" },
 ];
 
