@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Engineered an 8-class corporate credit-rating model (AAA–D, S&P-aligned) with 67.2% exact accuracy and 94.9% within-1-notch; integrated a Basel III stress-test simulator with per-request SHAP explainability over REST.",
       "Tracked 40+ experiments in MLflow; deployed a FastAPI backend (7 endpoints, sub-100ms) and a React dashboard on AWS EC2 with Docker.",
     ],
-    repo: "", // TODO
+    repo: "https://github.com/Shubham-102/credit-risk-engine",
     demo: "https://huggingface.co/spaces/shubhaM-Maheshwari/credit-risk-engine",
     preview: "/projects/credit-risk.png",
   },
@@ -89,15 +89,15 @@ export const projects: Project[] = [
   {
     id: "multimodal",
     name: "Explainable Multi-Modal Deep Learning",
-    kind: "Capstone",
+    kind: "Capstone · Human Activity Recognition",
     metric: "96.64% acc",
     stack: ["PyTorch", "SHAP", "Grad-CAM", "MLflow", "GCP Vertex AI"],
     bullets: [
       "Designed a gated-fusion architecture reaching 96.64% accuracy, beating single-modality baselines by 14%.",
       "Stress-tested under 10–30% noise with 18% higher accuracy retention; generated per-modality SHAP and Grad-CAM explanations on GCP Vertex AI.",
     ],
-    repo: "", // TODO
-    demo: "", // TODO
+    repo: "https://github.com/Shubham-102/HAR-Deep-Learning",
+    demo: "", // notebook project — no live demo
   },
   {
     id: "insurance-genai",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
       "Built an end-to-end RAG pipeline using a ChromaDB vector store and sentence-transformer embeddings; extended it with a LangGraph agent that routes between vector search and web search; deployed on Hugging Face Spaces.",
       "Trained a multi-class risk classifier on 50K+ records reaching 87% vs a 72% logistic baseline; deployed on AWS with real-time scoring, data-drift detection, and automated retraining triggers.",
     ],
-    repo: "", // TODO
+    repo: "https://github.com/Shubham-102/insurance-risk-advisor",
     demo: "https://insurance-risk-advisor-ecmby3rntyfatawmqd43mb.streamlit.app/",
     preview: "/projects/insurance.png",
   },
