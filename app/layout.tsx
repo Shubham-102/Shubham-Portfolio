@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Oswald } from "next/font/google";
+import Script from "next/script";
 import { personal } from "@/lib/data";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
@@ -38,6 +39,10 @@ export default function RootLayout({
       <body className="font-sans bg-base text-ink antialiased">
         <SmoothScroll />
         {children}
+        <Script
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
