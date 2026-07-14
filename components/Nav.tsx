@@ -50,9 +50,11 @@ export default function Nav() {
           </div>
           <a
             href={personal.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full border border-ink px-4 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-ink transition-all duration-300 hover:bg-ink hover:text-white"
           >
-            CV ↓
+            CV ↗
           </a>
         </div>
       </nav>

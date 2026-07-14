@@ -118,11 +118,14 @@ export default function Skills() {
           </div>
 
           <div className="mt-12 flex flex-wrap items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-faint">
-            <span className="uppercase">
-              {personal.name} · {personal.location} · {new Date().getFullYear()}
-            </span>
-            <a href={personal.resumeUrl} className="uppercase hover:text-accent">
-              CV ↓
+            <span className="uppercase">{personal.name}</span>
+            <a
+              href={personal.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="uppercase hover:text-accent"
+            >
+              CV ↗
             </a>
           </div>
         </footer>
