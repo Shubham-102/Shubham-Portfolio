@@ -11,7 +11,7 @@ import {
 // Runs on the server only — the API key is never exposed to the browser.
 export const runtime = "nodejs";
 
-const MODEL = process.env.CHAT_MODEL || "llama-3.1-8b-instant";
+const MODEL = process.env.CHAT_MODEL || "openai/gpt-oss-20b";
 
 // Assemble everything the model needs to know, straight from data.ts.
 function buildSystemPrompt(): string {
@@ -101,7 +101,10 @@ export async function POST(req: Request) {
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
     const response = await groq.chat.completions.create({
       model: MODEL,
-      max_tokens: 512,
+      max_tokens: 700,
+      // gpt-oss models reason by default; keep it minimal so the token
+      // budget goes to the actual answer, not the scratchpad.
+      ...(MODEL.includes("gpt-oss") ? { reasoning_effort: "low" } : {}),
       messages: [{ role: "system", content: buildSystemPrompt() }, ...messages],
     });
 

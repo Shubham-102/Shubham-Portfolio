@@ -26,8 +26,10 @@ The resume download button points at `/public/resume.pdf` (already included).
 
 - Route: `app/api/chat/route.ts`.
 - It builds a system prompt from `data.ts` and answers in the first person as you.
-- Default model: `llama-3.1-8b-instant` (fast + cheap). Change it with the
-  `CHAT_MODEL` env var (e.g. `llama-3.3-70b-versatile`).
+- Default model: `openai/gpt-oss-20b` (fast + cheap). Change it with the
+  `CHAT_MODEL` env var (e.g. `openai/gpt-oss-120b`). See the current list at
+  console.groq.com/docs/models — Groq periodically retires model IDs, so if the
+  bot starts replying "I'm having trouble responding right now", check this first.
 - Your API key stays server-side and is never sent to the browser.
 
 ## Deploy (Vercel)
